@@ -78,7 +78,6 @@ let createColorElement = (color) => {
 //funcao para proximo nivel do jogo
 let nextLevel = () => {
   score++;
-
   shuffleOrder();
 };
 
@@ -97,10 +96,7 @@ let gameOver = () => {
 let playGame = () => {
   alert("Bem vindo ao Gênesis! Iniciando novo jogo!");
   score = 0;
-
-  setTimeout(function () {
-    nextLevel();
-  }, 1000);
+  nextLevel();
 };
 
 //eventos de clique para as cores
