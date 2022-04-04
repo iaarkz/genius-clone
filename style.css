@@ -1,0 +1,99 @@
+body {
+  background: url(img/white-wood.jpg);
+  margin: 0;
+}
+a,
+a:link,
+a:visited {
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.2s;
+}
+a:hover {
+  transform: scale(1.2);
+}
+.main-game {
+  align-items: center;
+
+  display: flex;
+  height: 100vh;
+  justify-content: center;
+  width: 100vw;
+}
+.genius-logo {
+  align-items: center;
+  background-color: #181818;
+  border-radius: 100%;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 2rem;
+  height: 300px;
+  justify-content: center;
+  position: absolute;
+  width: 300px;
+  z-index: 1000;
+}
+.row {
+  align-items: center;
+  display: flex;
+  flex-direction: row;
+  font-size: 1.7rem;
+  height: 1.875rem;
+  justify-content: space-around;
+  width: 6.25rem;
+}
+
+.github {
+  filter: invert(100%);
+}
+.genius {
+  background-color: #181818;
+  border-radius: 100%;
+  border: 20px solid #181818;
+  box-shadow: 0px 0px 3.7px rgba(0, 0, 0, 0.266),
+    0px 0px 12.5px rgba(0, 0, 0, 0.298), 0px 0px 56px rgba(0, 0, 0, 0.33);
+  display: grid;
+  grid-gap: 0.625rem;
+  height: 43.75rem;
+  width: 43.75rem;
+
+  grid-template-areas:
+    "colorGreen colorRed"
+    "colorYellow colorBlue";
+}
+.blue {
+  background: linear-gradient(145deg, #233e91, #3b6ffd);
+  border-bottom-right-radius: 100%;
+  grid-area: colorBlue;
+}
+.red {
+  background: linear-gradient(45deg, #990000, #ff0000);
+  border-top-right-radius: 100%;
+  grid-area: colorRed;
+}
+.yellow {
+  background: linear-gradient(225deg, #b99801, #ffff00);
+  border-bottom-left-radius: 100%;
+  grid-area: colorYellow;
+}
+.green {
+  background: linear-gradient(315deg, #035f03, #01a501);
+  border-top-left-radius: 100%;
+  grid-area: colorGreen;
+}
+
+.selected {
+  filter: brightness(150%);
+}
+
+.footer {
+  background-color: #fff;
+  bottom: 0;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 0.7rem;
+  letter-spacing: 0.125rem;
+  position: absolute;
+  right: 1%;
+}
