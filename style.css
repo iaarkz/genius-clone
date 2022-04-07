@@ -84,6 +84,22 @@ a:hover {
   grid-area: colorGreen;
 }
 
+.info {
+  background-color: #fff;
+  border-radius: 0 0 0 20px;
+  box-sizing: border-box;
+  font-family: "Bebas Neue", sans-serif;
+  font-size: 1.125rem;
+  height: 12.5rem;
+  opacity: 0.8;
+  letter-spacing: 0.0625rem;
+  padding: 1.25rem;
+  position: absolute;
+  right: 0;
+  top: 0;
+  width: 20%;
+}
+
 .selected {
   filter: brightness(150%);
 }
@@ -96,6 +112,17 @@ a:hover {
   letter-spacing: 0.125rem;
   position: absolute;
   right: 1%;
+}
+
+@media screen and (max-width: 850px) {
+  .info {
+    border-radius: 0 0 20px 20px;
+    height: 9.375rem;
+    padding: 0 1.25rem;
+    position: absolute;
+    right: auto;
+    width: 60%;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -123,6 +150,12 @@ a:hover {
     margin: 0;
   }
 
+  .info {
+    padding: 40px 1.25rem 0;
+    position: absolute;
+    height: 12.5rem;
+  }
+
   .row {
     width: 80px;
   }
@@ -134,5 +167,13 @@ a:hover {
   .github {
     height: 20px;
     width: 20px;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .info {
+    padding: 0 1.25rem 0;
+    font-size: 1rem;
+    height: 9.375rem;
   }
 }

@@ -12,6 +12,9 @@ const red = document.querySelector(".red");
 const green = document.querySelector(".green");
 const yellow = document.querySelector(".yellow");
 
+let myScore = document.querySelector("#score");
+let round = document.querySelector("#round");
+
 //cria ordem aletoria de cores
 let shuffleOrder = () => {
   let colorOrder = Math.floor(Math.random() * 4);
@@ -23,6 +26,14 @@ let shuffleOrder = () => {
     lightColor(elementColor, Number(i) + 1);
   }
 };
+
+// beep para iniciar a partida
+function play() {
+  let audio = new Audio(
+    "https://media.geeksforgeeks.org/wp-content/uploads/20190531135120/beep.mp3"
+  );
+  return audio.play();
+}
 
 //acende a proxima cor
 let lightColor = (element, time) => {
@@ -46,8 +57,15 @@ let checkOrder = () => {
     }
   }
   if (clickedOrder.length == order.length) {
-    alert(`Pontuação: ${score}\nVocê acertou! Iniciando próximo nível!`);
-    nextLevel();
+    myScore.innerHTML = score;
+    round.innerHTML = `Parabéns, você acertou a última rodada, iniciando um novo nível em breve.`;
+    setTimeout(() => {
+      round.innerHTML = `Uma nova rodada se iniciou!`;
+      setTimeout(() => {
+        nextLevel();
+      }, 1000);
+      play();
+    }, 1200);
   }
 };
 
@@ -83,9 +101,7 @@ let nextLevel = () => {
 
 //funcao para game over
 let gameOver = () => {
-  alert(
-    `Pontuação: ${score}!\nVocê perdeu o jogo!\nClique em OK para iniciar um novo jogo`
-  );
+  round.innerHTML = `Você perdeu o jogo! Sua maior pontuação foi ${score}. Pressione OK para iniciar um novo jogo.`;
   order = [];
   clickedOrder = [];
 
@@ -95,7 +111,10 @@ let gameOver = () => {
 //funcao de inicio do jogo
 let playGame = () => {
   alert("Bem vindo ao Gênesis! Iniciando novo jogo!");
+
   score = 0;
+  myScore.innerHTML = "0";
+  round.innerHTML = "O jogo começou!";
   nextLevel();
 };
 
