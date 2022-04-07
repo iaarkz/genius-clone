@@ -65,6 +65,7 @@ let checkOrder = () => {
         nextLevel();
       }, 1000);
       play();
+      navigator.vibrate(200);
     }, 1200);
   }
 };
@@ -101,7 +102,9 @@ let nextLevel = () => {
 
 //funcao para game over
 let gameOver = () => {
-  round.innerHTML = `Você perdeu o jogo! Sua maior pontuação foi ${score}. Pressione OK para iniciar um novo jogo.`;
+  round.innerHTML = `Você perdeu o jogo! Sua maior pontuação foi ${
+    score - 1
+  }. Pressione OK para iniciar um novo jogo.`;
   order = [];
   clickedOrder = [];
 

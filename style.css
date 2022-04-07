@@ -121,7 +121,7 @@ a:hover {
     padding: 0 1.25rem;
     position: absolute;
     right: auto;
-    width: 60%;
+    width: 80%;
   }
 }
 
@@ -142,7 +142,7 @@ a:hover {
     width: 18.75rem;
   }
   .genius-logo {
-    font-size: 22px;
+    font-size: 1.375rem;
     justify-content: center;
     margin: 0;
     height: 150px;
@@ -151,9 +151,9 @@ a:hover {
   }
 
   .info {
-    padding: 40px 1.25rem 0;
+    padding: 2.5rem 1.25rem 0;
     position: absolute;
-    height: 12.5rem;
+    height: 9.375rem;
   }
 
   .row {
